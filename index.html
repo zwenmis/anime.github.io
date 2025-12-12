@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sade Anime Sayfası</title>
+    <!-- Tailwind CSS CDN'i -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Varsayılan font ayarı */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7; /* Hafif kirli beyaz arka plan */
+        }
+        /* Bulut efekti için özel stil: Kenar yumuşatma */
+        .cloud-style {
+            filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.1));
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-center p-4 sm:p-8">
+
+    <div class="max-w-xl w-full bg-white rounded-2xl shadow-xl p-6 sm:p-8 transition duration-500 hover:shadow-2xl">
+        
+        <!-- Üst Kısım: Anime Kızı ve Bulut Yazısı -->
+        <div class="relative flex justify-center mt-4 mb-20">
+            
+            <!-- Anime Kızı Resmi (Placeholder/Örnek Resim) -->
+            <!-- NOT: Gerçek bir anime kızı resmi eklemek için 'src' adresini değiştirin. -->
+            <img src="https://i.pinimg.com/736x/f5/83/82/f58382b650f14efd6c4cc6d1463ee762.jpg"
+                 alt="Sey bana kart numaranı verirmisinn"
+                 class="w-64 h-80 object-cover rounded-xl shadow-lg border-4 border-red-100 transition duration-300 hover:scale-[1.02]">
+
+            <!-- Bulut Şeklinde Yazı Alanı -->
+            <div class="cloud-style absolute top-0 right-1/4 transform -translate-y-1/2 translate-x-1/4
+                        bg-white p-3 sm:p-4 rounded-full border-2 border-pink-300 w-48 h-20 sm:w-56 sm:h-24 flex items-center justify-center
+                        opacity-95 transition duration-500 hover:border-pink-500 shadow-lg">
+                <p class="text-gray-800 text-center text-sm sm:text-base font-semibold italic">
+                    <!-- 
+                        ##################################
+                        #   BURAYA KENDİ YAZINIZI YAZIN  #
+                        ##################################
+                    -->
+                    Sey bana kart numaranı verirmisinn
+                </p>
+            </div>
+        </div>
+
+        <!-- Alt Kısım: Kart Numarası Alanı -->
+        <div class="w-full mt-10 p-5 bg-gray-50 rounded-lg shadow-inner border border-gray-200">
+            <h2 class="text-xl font-extrabold text-gray-700 mb-4 border-b pb-2">Özel Bilgi Alanı</h2>
+            
+            <div class="flex flex-col">
+                <label for="card-input" class="block text-gray-600 font-medium mb-2">
+                    Kart Numarası:
+                </label>
+                <!-- DİREKT WEB SİTE ÜZERİNDEN YAZILABİLEN INPUT ALANI -->
+                <input type="text" 
+                       id="card-input" 
+                       placeholder="XXXX XXXX XXXX XXXX"
+                       maxlength="19"
+                       class="w-full p-3 bg-white border-2 border-gray-300 rounded-md text-gray-900 font-mono tracking-wider text-xl shadow-sm 
+                              focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-400 transition duration-200"
+                       value="">
+            </div>
+            
+            <p class="mt-3 text-xs text-gray-500 text-center">
+                Zwen
+            </p>
+        </div>
+
+    </div>
+
+</body>
+</html>
